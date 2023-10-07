@@ -1,2 +1,2 @@
 test:
-    git status
+	git status
