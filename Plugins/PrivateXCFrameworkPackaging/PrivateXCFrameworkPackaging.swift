@@ -13,7 +13,7 @@ struct PrivateXCFrameworkPackaging: BuildToolPlugin {
         return [
             .prebuildCommand(
                 displayName: "Run generate keys",
-                executable: Path("/usr/bin/bash"),
+                executable: Path("/bin/bash"),
                 arguments: [
                     "pwd"
                 ],
