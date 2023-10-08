@@ -16,10 +16,7 @@ let package = Package(
         .plugin(
             name: "PrivateXCFrameworkPackaging",
             capability: .command(
-                intent: .custom(verb: "hoge", description: "fuga"),
-                permissions: [
-                    .writeToPackageDirectory(reason: "This command reformats source files")
-                ]
+                intent: .custom(verb: "hoge", description: "fuga")
             )
         ),
     ]
