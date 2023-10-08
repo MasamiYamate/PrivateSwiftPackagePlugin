@@ -15,7 +15,12 @@ let package = Package(
     targets: [
         .plugin(
             name: "PrivateXCFrameworkPackaging",
-            capability: .buildTool()
+            capability: .command(
+                intent: .custom(verb: "hoge", description: "fuga"),
+                permissions: [
+                    .writeToPackageDirectory(reason: "This command reformats source files")
+                ]
+            )
         ),
     ]
 )
