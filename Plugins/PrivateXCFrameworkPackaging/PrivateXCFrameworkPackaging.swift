@@ -16,6 +16,8 @@ struct PrivateXCFrameworkPackaging: CommandPlugin {
         print(context)
         print(arguments)
         print("hoge!!")
+        print(context.package.directory)
+        print(context.pluginWorkDirectory)
     }
 }
 
