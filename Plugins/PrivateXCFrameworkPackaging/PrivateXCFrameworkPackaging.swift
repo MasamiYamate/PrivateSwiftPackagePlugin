@@ -19,10 +19,9 @@ struct PrivateXCFrameworkPackaging: CommandPlugin {
         print("hoge!!")
         print(context.package.directory)
         print(context.pluginWorkDirectory)
-        let a = context.pluginWorkDirectory.removingLastComponent()
         let process = Process()
-        process.executableURL = URL(fileURLWithPath: context.package.directory.string)
-        process.launchPath = "/usr/bin/make"
+        process.executableURL = URL(fileURLWithPath: "/bin/echo")
+        process.arguments = ["Hello, World."]
 //        process.arguments = ["/Applications/Slack.app"]
         process.launch()
         process.waitUntilExit()
