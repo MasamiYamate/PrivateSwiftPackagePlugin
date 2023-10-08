@@ -5,6 +5,7 @@
 //  Created by Masami on 2023/10/07.
 //
 
+import Foundation
 import PackagePlugin
 
 @main
@@ -18,6 +19,12 @@ struct PrivateXCFrameworkPackaging: CommandPlugin {
         print("hoge!!")
         print(context.package.directory)
         print(context.pluginWorkDirectory)
+        let a = context.pluginWorkDirectory.removingLastComponent()
+        let process = Process()
+        process.launchPath = "cd \(a) & /usr/bin/make"
+//        process.arguments = ["/Applications/Slack.app"]
+        process.launch()
+        process.waitUntilExit()
     }
 }
 
