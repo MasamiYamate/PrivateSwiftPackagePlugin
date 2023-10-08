@@ -8,17 +8,14 @@
 import PackagePlugin
 
 @main
-struct PrivateXCFrameworkPackaging: BuildToolPlugin {
-    func createBuildCommands(context: PluginContext, target: Target) async throws -> [Command] {
-        return [
-            .prebuildCommand(
-                displayName: "Run generate keys",
-                executable: Path("/usr/bin/make"),
-                arguments: [
-                ],
-                outputFilesDirectory: context.pluginWorkDirectory
-            )
-        ]
+struct PrivateXCFrameworkPackaging: CommandPlugin {
+    func performCommand(
+        context: PluginContext,
+        arguments: [String]
+    ) async throws {
+        print(context)
+        print(arguments)
+        print("hoge!!")
     }
 }
 
