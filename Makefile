@@ -1,4 +1,4 @@
 binary-release:
-	pwd
+	bash Scripts/binary-release.sh ${WORKDIR}
 	
 	

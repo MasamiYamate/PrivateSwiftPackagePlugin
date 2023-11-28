@@ -18,7 +18,7 @@ struct PrivateXCFrameworkPackaging: CommandPlugin {
         let process = Process()
         process.currentDirectoryURL = URL(fileURLWithPath: checkoutProjectPath)
         process.executableURL = URL(fileURLWithPath: "/usr/bin/make")
-        process.arguments = ["binary-release", "\(checkoutProjectPath)"]
+        process.arguments = ["binary-release", "WORKDIR=\(checkoutProjectPath)"]
         process.launch()
         process.waitUntilExit()
     }
