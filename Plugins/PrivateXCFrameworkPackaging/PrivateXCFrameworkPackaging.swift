@@ -38,7 +38,7 @@ private extension PrivateXCFrameworkPackaging {
         let checkoutDirectoryPath = sourcePackagesDirectoryPath?
             .appending(component: "checkouts")
             .appending(component: "PrivateXCFrameworkPackaging")
-        print(checkoutDirectoryPath)
+        print(checkoutDirectoryPath?.absoluteString ?? "")
     }
     
 }
