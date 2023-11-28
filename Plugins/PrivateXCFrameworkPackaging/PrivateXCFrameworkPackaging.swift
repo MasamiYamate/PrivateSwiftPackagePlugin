@@ -14,11 +14,6 @@ struct PrivateXCFrameworkPackaging: CommandPlugin {
         context: PluginContext,
         arguments: [String]
     ) async throws {
-        print(context)
-        print(arguments)
-        print("hoge!!")
-        print(context.package.directory)
-        print(context.pluginWorkDirectory)
         let checkoutProjectPath = makeCheckoutProjectPath(context: context)!
         let process = Process()
         process.currentDirectoryURL = URL(fileURLWithPath: checkoutProjectPath)
