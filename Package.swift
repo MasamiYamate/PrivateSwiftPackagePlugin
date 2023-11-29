@@ -19,7 +19,10 @@ let package = Package(
         .plugin(
             name: "PrivateXCFrameworkPackaging",
             capability: .command(
-                intent: .custom(verb: "hoge", description: "fuga")
+                intent: .custom(verb: "hoge", description: "fuga"),
+                permissions: [
+                    .writeToPackageDirectory(reason: "hogehoge")
+                ]
             )
         ),
     ]
