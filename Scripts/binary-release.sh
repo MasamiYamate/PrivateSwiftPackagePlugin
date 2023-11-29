@@ -3,6 +3,9 @@ WORK_DIR_PATH=$1
 
 cd $WORK_DIR_PATH
 
+
+mkdir hogehoge
+
 # Binary directly check
 if [ ! -e $BINARY_DIR_PATH ]; then
     exit 1
