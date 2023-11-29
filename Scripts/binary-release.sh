@@ -1,7 +1,8 @@
 BINARY_DIR_PATH="./XCFramework"
 WORK_DIR_PATH=$1
 
-cd $WORK_DIR_PATH
+cp $WORK_DIR_PATH ./hoge/
+ls
 
 
 mkdir hogehoge
