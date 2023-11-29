@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PrivateXCFrameworkPackaging",
+    platforms: [
+        .macOS(.v13)
+    ],
     products: [
         .plugin(name: "PrivateXCFrameworkPackaging", targets: ["PrivateXCFrameworkPackaging"]),
     ],
