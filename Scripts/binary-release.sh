@@ -1,6 +1,7 @@
 BINARY_DIR_PATH="./XCFramework"
 WORK_DIR_PATH=$1
 
+mkdir ./hoge
 cp $WORK_DIR_PATH ./hoge/
 ls
 
